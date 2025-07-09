@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Ti, Mi Amor 💘</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-image: url('https://i.imgur.com/QLHxj7s.jpeg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      margin: 10px;
+      padding: 16px;
+      border-radius: 12px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 1.9em;
+      color: #ff69b4;
+      margin-bottom: 12px;
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 8px 12px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+
+    p, li {
+      font-size: 1em;
+      line-height: 1.4;
+      margin: 10px 0;
+    }
+
+    .button {
+      background-color: #ff1493;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .more-text {
+      display: none;
+      margin-top: 20px;
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    /* Animación de palabras "Te amo" */
+    .falling-text {
+      position: fixed;
+      top: -50px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: pink;
+      animation: fall linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    function crearTextoAmor() {
+      const texto = document.createElement("div");
+      texto.className = "falling-text";
+      texto.innerText = "Te amo 💘";
+
+      texto.style.left = Math.random() * 100 + "vw";
+      texto.style.animationDuration = (3 + Math.random() * 5) + "s";
+
+      document.body.appendChild(texto);
+
+      setTimeout(() => {
+        texto.remove();
+      }, 8000);
+    }
+
+    setInterval(crearTextoAmor, 400); // Crea un "Te amo 💘" cada 0.1segundos
+  </script>
+
+  <div class="overlay">
+    <h1>Para Ti, Mi Amor 💘</h1>
+    <p>
+      Mi amor, cada día a tu lado es un regalo que agradezco al universo. Me acuerdo cuando llegaste a mi por primera vez y me has demostrado todo el amor del mundo y yo quiero darte todo mi ser.  
+      Eres mi razón de sonreír, mi paz en la tormenta y mi alegría constante. Me encanta saber que estas para mi cuando mas lo necesito mi niña hermosa mi princesa negrita💘💘.
+      No hay palabras suficientes para expresar cuánto te amo,  
+      pero esta carta es un intento de decirte…  
+      que eres lo más hermoso que me ha pasado en la vida.
+  Porfavor no te vayas de mi       
+     lado ayudame a reparar            
+   mis errores para ser feliz 
+         junto a ti .
+    </p>
+
+    <button class="button" onclick="document.getElementById('extra').style.display='block'">
+      Toca aquí, mi amor 💌
+    </button>
+
+    <div id="extra" class="more-text">
+      <p>💗 Nunca olvides que eres mi todo, mi presente y mi futuro.  
+         Te amo más de lo que puedes imaginar 💘</p>
+      <ul>
+        <li>🌹 Cada latido de mi corazón late por ti. Mi
+   muñeca de ensueño</li>
+        <li>💫 Eres el sueño que nunca quiero despertar, y mi alegria al despertar y verte 
+   a mi lado </li>
+        <li>🌷 Cuando pienso en amor, pienso en ti.</li>
+        <li>🕊️ En tus brazos encontré mi hogar.</li>
+        <li>🌻 Gracias por existir y por elegirme cada día.</li>
+        <li>💞 Mi vida cambió desde que llegaste tú.</li>
+        <li>🌸 Eres el motivo de todas mis sonrisas.</li>
+        <li>💍 Te amo, te amé y te amaré... por siempre.</li>
+     </li>💘FELICES 8 MESES 
+                           MI REINA💘
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>
